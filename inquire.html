@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Inquire about available homes, custom builds, and luxury remodels from Fifty Seventh & 7th Luxury Homes in Houston, TX." />
+  <title>INQUIRE | Fifty Seventh &amp; 7th Luxury Homes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="https://static.wixstatic.com/media/d3e2df_d61966aad9d247299ac397d9068b82ac~mv2.png/v1/fill/w_106,h_116,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d3e2df_d61966aad9d247299ac397d9068b82ac~mv2.png" alt="Fifty Seventh & 7th logo" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="availablehomes.html">Available Homes</a></li>
+    <li><a href="luxuryremodels.html">Luxury Remodels</a></li>
+    <li><a href="recognition.html">Recognition</a></li>
+    <li><a href="press.html">Press</a></li>
+    <li><a href="propertyacquisition.html">Property Acquisition</a></li>
+    <li><a href="inquire.html" class="active">Inquire</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile-overlay" id="mobileMenu">
+  <button class="nav-close" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a>
+  <a href="availablehomes.html">Available Homes</a><a href="luxuryremodels.html">Luxury Remodels</a>
+  <a href="recognition.html">Recognition</a><a href="press.html">Press</a>
+  <a href="propertyacquisition.html">Property Acquisition</a><a href="inquire.html">Inquire</a>
+</div>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <div class="page-header-bg" style="background-image:url('https://static.wixstatic.com/media/11062b_e8590224d2d1438c96bb6486dc7ac6e4~mv2.jpg/v1/fill/w_1562,h_537,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_e8590224d2d1438c96bb6486dc7ac6e4~mv2.jpg');"></div>
+  <div class="page-header-content">
+    <h1>Inquire</h1>
+    <div class="header-line"></div>
+    <p>Begin a conversation about your next home.</p>
+  </div>
+</header>
+
+<!-- CONTACT -->
+<section style="background:var(--dark);">
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Let's Build Something Extraordinary</h2>
+        <div class="gold-divider"></div>
+        <p class="section-body">We welcome inquiries from prospective buyers, real estate professionals, and landowners interested in partnering with one of Houston's most recognized luxury home builders.</p>
+        <p class="section-body">Because we take on a limited number of projects, we give every inquiry our complete attention and respond personally.</p>
+
+        <div style="margin-top:40px;display:flex;flex-direction:column;gap:20px;">
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:2px;background:var(--gold);flex-shrink:0;margin-top:4px;height:40px;"></div>
+            <div>
+              <p style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Phone</p>
+              <a href="tel:2817885700" style="color:var(--light);font-size:1rem;">(281) 788-5700</a>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:2px;background:var(--gold);flex-shrink:0;margin-top:4px;height:40px;"></div>
+            <div>
+              <p style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Email</p>
+              <a href="mailto:info@fiftyseventhandseventh.com" style="color:var(--light);font-size:1rem;">info@fiftyseventhandseventh.com</a>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:2px;background:var(--gold);flex-shrink:0;margin-top:4px;height:40px;"></div>
+            <div>
+              <p style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Office</p>
+              <p style="color:var(--light);font-size:1rem;margin:0;">7026 Old Katy Road, Suite 103<br>Houston, TX 77024</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;">
+            <div style="width:2px;background:var(--gold);flex-shrink:0;margin-top:4px;height:40px;"></div>
+            <div>
+              <p style="font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">Instagram</p>
+              <a href="https://www.instagram.com/fiftyseventhandseventh" target="_blank" rel="noopener" style="color:var(--light);font-size:1rem;">@fiftyseventhandseventh</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(xxx) xxx-xxxx" />
+          </div>
+          <div class="form-group">
+            <label for="interest">Area of Interest</label>
+            <select id="interest" name="interest">
+              <option value="">Select one...</option>
+              <option value="available">Available Homes</option>
+              <option value="custom">Custom Build</option>
+              <option value="remodel">Luxury Remodel</option>
+              <option value="land">Property / Land</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your vision..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-filled" style="width:100%;padding:16px;">Send Inquiry</button>
+        </form>
+        <div id="formSuccess" style="display:none;margin-top:24px;padding:20px;background:rgba(201,169,110,0.1);border:1px solid var(--gold);text-align:center;">
+          <p style="color:var(--gold);font-size:0.9rem;letter-spacing:0.08em;">Thank you — we'll be in touch shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('formSuccess').style.display = 'block';
+  e.target.reset();
+  e.target.style.display = 'none';
+}
+</script>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">Fifty Seventh &amp; 7th</div>
+  <div class="footer-sub">Luxury Homes</div>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/fiftyseventhandseventh" target="_blank" rel="noopener">
+      <img src="https://static.wixstatic.com/media/8d6893330740455c96d218258a458aa4.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8d6893330740455c96d218258a458aa4.png" alt="Instagram" />
+    </a>
+  </div>
+  <div class="footer-contact">
+    <a href="tel:2817885700">(281) 788-5700</a><br>
+    <a href="mailto:info@fiftyseventhandseventh.com">info@fiftyseventhandseventh.com</a><br>
+    7026 Old Katy Road, Suite 103, Houston, TX 77024
+  </div>
+  <div class="footer-copy">© 2026 by Fifty Seventh &amp; 7th Luxury Homes</div>
+</footer>
+
+</body>
+</html>
