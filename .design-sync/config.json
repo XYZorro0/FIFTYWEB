@@ -1,0 +1,39 @@
+{
+  "projectId": "c9101e05-9fb2-4a30-88d0-4ff7d69778bf",
+  "pkg": "fiftyweb-next",
+  "globalName": "FiftyWeb",
+  "shape": "package",
+  "tsconfig": "./tsconfig.json",
+  "cssEntry": ".next/dev/static/chunks/Documents_GitHub_FIFTYWEB_src_app_globals_css_1igg3k2._.single.css",
+  "runtimeFontPrefixes": ["Playfair Display", "Cormorant Garamond", "Inter"],
+  "readmeHeader": ".design-sync/conventions.md",
+  "libOverrides": {
+    "bundle.mjs": "Next.js components reference process.platform and process.env.NEXT_* globals not covered by NODE_ENV-only define"
+  },
+  "componentSrcMap": {
+    "AwardCard": "src/components/awards/AwardCard.tsx",
+    "CustomCursor": "src/components/effects/CustomCursor.tsx",
+    "LoadingScreen": "src/components/effects/LoadingScreen.tsx",
+    "Footer": "src/components/layout/Footer.tsx",
+    "PageHeader": "src/components/layout/PageHeader.tsx",
+    "SectionWrapper": "src/components/layout/SectionWrapper.tsx",
+    "Lightbox": "src/components/media/Lightbox.tsx",
+    "MasonryGrid": "src/components/media/MasonryGrid.tsx",
+    "PropertyGallery": "src/components/media/PropertyGallery.tsx",
+    "MobileMenu": "src/components/navigation/MobileMenu.tsx",
+    "NavLinks": "src/components/navigation/NavLinks.tsx",
+    "NavLogo": "src/components/navigation/NavLogo.tsx",
+    "Navbar": "src/components/navigation/Navbar.tsx",
+    "PressCard": "src/components/press/PressCard.tsx",
+    "PressLogoBar": "src/components/press/PressLogoBar.tsx",
+    "PropertyCard": "src/components/property/PropertyCard.tsx",
+    "CounterStat": "src/components/ui/CounterStat.tsx",
+    "GlassCard": "src/components/ui/GlassCard.tsx",
+    "GoldDivider": "src/components/ui/GoldDivider.tsx",
+    "ImageSkeleton": "src/components/ui/ImageSkeleton.tsx",
+    "LuxuryButton": "src/components/ui/LuxuryButton.tsx",
+    "LuxuryImage": "src/components/ui/LuxuryImage.tsx",
+    "SectionLabel": "src/components/ui/SectionLabel.tsx",
+    "TextReveal": "src/components/ui/TextReveal.tsx"
+  }
+}
