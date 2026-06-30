@@ -1,0 +1,141 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* ─── Limestone / Warm-White Luxury Palette ─────────────────── */
+  --color-gold:       #B8975A;   /* antique gold — richer on light bg */
+  --color-gold-light: #C8A870;
+  --color-gold-dark:  #8B6E35;
+
+  --color-cream:      #FAF8F4;   /* near-white parchment */
+  --color-ink:        #1C1A17;   /* near-black warm — headings */
+
+  /* Surface tones (lightest → slightly deeper limestone) */
+  --color-dark:       #F5F0E8;   /* limestone — main bg */
+  --color-dark-2:     #EDE8DF;   /* linen — alternate sections */
+  --color-dark-3:     #E4DDD1;   /* warm stone — accent sections */
+  --color-mid:        #D4C9B0;   /* stone border / divider mid-tone */
+
+  /* Body text — warm near-black */
+  --color-light:      #2C2822;   /* primary body text */
+
+  /* Fonts */
+  --font-display:   var(--font-playfair), Georgia, serif;
+  --font-editorial: var(--font-cormorant), 'Times New Roman', serif;
+  --font-body:      var(--font-inter), 'Helvetica Neue', sans-serif;
+  --font-sans:      var(--font-inter), 'Helvetica Neue', sans-serif;
+
+  /* shadcn token bridge (light theme) */
+  --color-background:          #F5F0E8;
+  --color-foreground:          #1C1A17;
+  --color-card:                #EDE8DF;
+  --color-card-foreground:     #1C1A17;
+  --color-popover:             #F5F0E8;
+  --color-popover-foreground:  #1C1A17;
+  --color-primary:             #B8975A;
+  --color-primary-foreground:  #FAF8F4;
+  --color-secondary:           #D4C9B0;
+  --color-secondary-foreground:#1C1A17;
+  --color-muted:               #E4DDD1;
+  --color-muted-foreground:    rgba(44, 40, 34, 0.55);
+  --color-accent:              #EDE8DF;
+  --color-accent-foreground:   #B8975A;
+  --color-destructive:         oklch(0.577 0.245 27.325);
+  --color-border:              rgba(184, 151, 90, 0.2);
+  --color-input:               rgba(184, 151, 90, 0.15);
+  --color-ring:                rgba(184, 151, 90, 0.4);
+  --radius:                    0px;
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    background: #F5F0E8;
+    color: #2C2822;
+    scroll-behavior: smooth;
+    font-family: var(--font-inter), 'Helvetica Neue', sans-serif;
+  }
+  body {
+    background: #F5F0E8;
+    color: #2C2822;
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3, h4 {
+    font-family: var(--font-playfair), Georgia, serif;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #1C1A17;
+  }
+  p { margin-bottom: 1.1em; }
+}
+
+@layer utilities {
+  /* Glassmorphism — warm limestone glass for light theme */
+  .glass-dark {
+    background: rgba(245, 240, 232, 0.92);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+  }
+  .glass-card {
+    background: rgba(237, 232, 223, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(184, 151, 90, 0.18);
+  }
+
+  /* Gold underline hover effect — scaleX avoids layout thrash */
+  .luxury-underline {
+    position: relative;
+  }
+  .luxury-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0;
+    width: 100%; height: 1px;
+    background: #B8975A;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .luxury-underline:hover::after { transform: scaleX(1); }
+
+  /* Section container */
+  .section-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 40px;
+  }
+
+  /* Custom cursor hide for default */
+  .cursor-none { cursor: none; }
+}
+
+/* Shimmer animation for skeleton loading */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #EDE8DF 25%, #D4C9B0 50%, #EDE8DF 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
